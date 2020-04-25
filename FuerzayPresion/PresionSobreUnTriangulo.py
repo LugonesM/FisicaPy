@@ -18,3 +18,10 @@ if __name__ == '__main__':
 
   print("La presion sobre el triangulo es fuerza sobre superficie, en este caso : ")
   print(presion, "kg/cm²")  #en el caso del libro 0,6666666
+ #Luego pasar el resultado a las siguientes unidades
+  presion = presion * 10
+  print(presion,"kg/m²")
+  presion = presion * 10
+  print(presion,"g/dm²")
+  presion = presion / 10000
+  print(presion, "kg/mm²")
