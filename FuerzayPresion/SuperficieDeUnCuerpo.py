@@ -6,18 +6,17 @@ import sys
 #¿Cuanto mide la superficie?
 
 def check( value ) :   #funcion que chequea que el usuario ingreso valores posibles para la cuenta 
- p = 0
  try:
   float(value)
  except ValueError:  #de no ser asi imprime un mensaje de error y sale del programa
    print( "pone solo numeros boludoo")
    sys.exit()
- return p
+ return 
 
 def strToFloat( cadena ):
  if type(cadena) == str :
    cadena = cadena.replace(",",".")  #encuentra las comas en el str y las reemplaza por un punto
-   if check(cadena) == 0 :
+   if check(cadena) != 1 :
      cadena=float(cadena)
  return cadena
 
