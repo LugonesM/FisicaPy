@@ -7,8 +7,9 @@ PEH = 7.85 #peso especifico del hierro en g/cm³
 
 def check( value ) :  
  """Chequea si puede convertir las cadena a float:
-Si puede la convierte y retorna eso, 
-Si no puede cierra el programa con un mensaje de:  pone solo numeros"""
+      Si puede la convierte y retorna eso, 
+      Si no puede cierra el programa con un mensaje de:  pone solo numeros
+ """
  try:
   float(value)
  except ValueError: 
@@ -19,9 +20,10 @@ Si no puede cierra el programa con un mensaje de:  pone solo numeros"""
 
 def strToFloat( cadena ):
   """Toma un avariable, si es de tipo str reemplaza sus comas, si las tiene, por puntos. 
-Chequea si puede convertir las cadena a float( mediante funcion check) : 
-Si puede la convierte y retorna eso, 
-Si no puede cierra el programa con un mensaje"""
+       Chequea si puede convertir las cadena a float( mediante funcion check) : 
+        Si puede la convierte y retorna eso, 
+        Si no puede cierra el programa con un mensaje
+  """
   if type(cadena) == str :
     cadena = cadena.replace(",",".")  #encuentra las comas en el str y las reemplaza por un punto
     if check(cadena) != 1 :
