@@ -10,9 +10,10 @@ PEH = 7.85 #peso especifico del hierro en g/cm³
 PEC = 0.22 #peso especifico del corcho en g/cm³
 
 def check( value ) :
-"""Chequea si puede convertir las cadena a float:
-Si puede la convierte y retorna eso, 
-Si no puede cierra el programa con un mensaje de:  pone solo numeros"""
+   """Chequea si puede convertir las cadena a float:
+       Si puede la convierte y retorna eso, 
+       Si no puede cierra el programa con un mensaje de:  pone solo numeros
+   """
  try:
   float(value)
  except ValueError: 
@@ -23,10 +24,11 @@ Si no puede cierra el programa con un mensaje de:  pone solo numeros"""
 
 
 def strToFloat( cadena ):
-"""Toma un avariable, si es de tipo str reemplaza sus comas, si las tiene, por puntos. 
-Chequea si puede convertir las cadena a float( mediante funcion check) : 
-Si puede la convierte y retorna eso, 
-Si no puede cierra el programa con un mensaje"""
+   """Toma un avariable, si es de tipo str reemplaza sus comas, si las tiene, por puntos. 
+       Chequea si puede convertir las cadena a float( mediante funcion check) : 
+        Si puede la convierte y retorna eso, 
+        Si no puede cierra el programa con un mensaje
+   """
 
  if type(cadena) == str:
    cadena = cadena.replace(",",".")  #encuentra las comas en el str y las reemplaza por un punto
@@ -37,12 +39,12 @@ Si no puede cierra el programa con un mensaje"""
 
 
 def calculoPeso(vol, pE ): 
-"""calcula el peso en gramos de un material tomando su volumen  (cm³) y peso especifico (g/cm³)"""
+    """calcula el peso en gramos de un material tomando su volumen  (cm³) y peso especifico (g/cm³)"""
   return vol * pE
 
 
 def calculoVol(peso , pE ):
-"""calcula el volumen en cm³ de un material tomando su peso en gramos y su peso especifico (g/cm³)"""
+    """calcula el volumen en cm³ de un material tomando su peso en gramos y su peso especifico (g/cm³)"""
  return peso / pE
 
 
